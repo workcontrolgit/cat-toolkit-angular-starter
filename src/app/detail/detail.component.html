@@ -1,0 +1,160 @@
+<div class="container-fluid">
+  <!-- HTML form mark up -->
+  <form [formGroup]="entryForm" novalidate>
+    <div class="card">
+      <div class="card-header">
+        <div class="float-left"><h3 class="text-info">Position</h3></div>
+        <div class="float-right">
+          <!-- HTML markup for form mode New or Edit -->
+          <h5 class="text-warning font-italic">{{ formMode }}</h5>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-danger" [hidden]="!error" translate>
+          Position Number, Title, Description or Salary incorrect.
+        </div>
+        <div class="form-group">
+          <label for="id">Id</label>
+          <label class="d-block">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="id"
+              autocomplete="id"
+              [placeholder]="'Auto Assigned Id' | translate"
+              readonly
+            />
+            <span hidden translate>Id</span>
+            <small
+              [hidden]="entryForm.controls.id.valid || entryForm.controls.id.untouched"
+              class="text-danger"
+              translate
+            >
+              Id is required
+            </small>
+          </label>
+
+          <label for="positionNumber">Position Number</label>
+          <label class="d-block">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="positionNumber"
+              autocomplete="positionNumber"
+              [placeholder]="'Enter position number here' | translate"
+              required
+            />
+            <span hidden translate>PositionNumber</span>
+            <small
+              [hidden]="entryForm.controls.positionNumber.valid || entryForm.controls.positionNumber.untouched"
+              class="text-danger"
+              translate
+            >
+              Position Number is required
+            </small>
+          </label>
+          <label for="positionTitle">Position Title</label>
+
+          <label class="d-block">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="positionTitle"
+              autocomplete="current-positionTitle"
+              [placeholder]="'Enter title here' | translate"
+              required
+            />
+            <span hidden translate>PositionTitle</span>
+            <small
+              [hidden]="entryForm.controls.positionTitle.valid || entryForm.controls.positionTitle.untouched"
+              class="text-danger"
+              translate
+            >
+              Position Title is required
+            </small>
+          </label>
+          <label for="positionDescription">Position Description</label>
+
+          <label class="d-block">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="positionDescription"
+              autocomplete="current-positionDescription"
+              [placeholder]="'Enter description here' | translate"
+              required
+            />
+            <span hidden translate>PositionDescription</span>
+            <small
+              [hidden]="
+                entryForm.controls.positionDescription.valid || entryForm.controls.positionDescription.untouched
+              "
+              class="text-danger"
+              translate
+            >
+              Position Description is required
+            </small>
+          </label>
+          <label for="positionSalary">Position Salary</label>
+
+          <label class="d-block">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="positionSalary"
+              autocomplete="current-positionSalary"
+              [placeholder]="'Enter salary here' | translate"
+              required
+            />
+            <span hidden translate>PositionDescription</span>
+            <small
+              [hidden]="entryForm.controls.positionSalary.valid || entryForm.controls.positionSalary.untouched"
+              class="text-danger"
+              translate
+            >
+              Position Salary is required and must be numeric
+            </small>
+          </label>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="float-left">
+          <!-- HTML markup for Create button -->
+          <button
+            (click)="onCreate()"
+            class="btn btn-primary w-20"
+            type="submit"
+            [disabled]="entryForm.invalid || !isAddNew"
+            *ngIf="this.isAddNew"
+          >
+            <span translate><i class="fas fa-plus"></i> Create</span>
+          </button>
+          <!-- HTML markup for Update button -->
+          <button
+            (click)="onUpdate()"
+            class="btn btn-primary w-20"
+            type="submit"
+            [disabled]="entryForm.invalid || isAddNew"
+            *ngIf="!this.isAddNew"
+          >
+            <span translate><i class="fas fa-edit"></i> Update</span>
+          </button>
+          <!-- HTML markup for Delete button -->
+          <button
+            (click)="onDelee()"
+            class="btn btn-danger w-20"
+            type="submit"
+            [disabled]="entryForm.invalid || isAddNew"
+            *ngIf="!this.isAddNew"
+          >
+            <span translate><i class="fas fa-trash-alt"></i> Delete</span>
+          </button>
+        </div>
+        <div class="float-right">
+          <!-- HTML markup for Back button -->
+          <a class="btn text-dark" [routerLink]="['/master']"><i class="fa fa-arrow-left"></i> Back</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

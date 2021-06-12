@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-header">
+      <div class="float-left"><h3 class="text-info">Position</h3></div>
+      <div class="float-right">
+        <!-- Add button with routerLink to the detail page -->
+        <a class="btn btn-primary" [routerLink]="['/detail']"><i class="fa fa-plus"></i> Add</a>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive-sm">
+        <!-- Angular Datatables server side paging -->
+        <table datatable [dtOptions]="dtOptions" class="row-border hover">
+          <thead>
+            <tr>
+              <th>Position Number</th>
+              <th>Position Title</th>
+              <th>Position Descripton</th>
+              <th>Position Salary</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="positions?.length != 0">
+            <tr *ngFor="let position of positions" (click)="wholeRowClick(position)">
+              <td>
+                <!-- Hyperlink position number with routerLink and position Id parameter -->
+                <a [routerLink]="['/detail', position.id]">{{ position.positionNumber }}</a>
+              </td>
+              <td>{{ position.positionTitle }}</td>
+              <td>{{ position.positionDescription }}</td>
+              <td>{{ position.positionSalary }}</td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="positions?.length == 0">
+            <tr>
+              <td colspan="3" class="no-data-available">No data!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card-footer">*Searchable columns are Number, Title and Description</div>
+  </div>
+</div>
