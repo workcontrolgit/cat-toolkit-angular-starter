@@ -1,0 +1,39 @@
+<div class="login-container bg-light">
+  <div class="login-box">
+    <h1 translate>APP_NAME</h1>
+    <div>
+      <h6 class="d-inline-block">v{{ version }}</h6>
+      <div class="d-inline-block ml-3"></div>
+    </div>
+    <div class="container">
+      <div class="card col-md-6 mt-3 mx-auto">
+        <div class="card-body">
+          <h4 class="card-title text-center">
+            <i class="far fa-3x fa-user-circle text-muted"></i>
+          </h4>
+
+          <div *ngIf="isAuthenticated$ | async as isAuthenticated; else noAuth">
+            <button class="btn btn-primary w-40" (click)="logout()">Logout</button>
+            <!-- <hr />
+
+            <br />
+
+            Is Authenticated: {{ isAuthenticated }}
+
+            <br />
+            userData
+            <pre>{{ userData$ | async | json }}</pre>
+
+            <br /> -->
+          </div>
+
+          <ng-template #noAuth>
+            <button class="btn btn-primary w-100" (click)="login()">
+              <span translate>Login</span>
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

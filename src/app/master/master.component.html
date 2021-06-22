@@ -1,4 +1,10 @@
 <div class="container-fluid">
+  <p>
+    <button class="btn btn-success mr-1" (click)='login()'>login</button>
+    <button class="btn btn-primary mr-1" (click)='logout()'>logout</button>
+  </p>
+
+  AccessToken: {{accessToken}}
   <div class="card">
     <div class="card-header">
       <div class="float-left"><h3 class="text-info">Position</h3></div>

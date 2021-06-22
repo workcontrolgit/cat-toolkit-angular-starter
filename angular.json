@@ -28,7 +28,8 @@
               "src/robots.txt",
               "src/manifest.webmanifest",
               "src/assets",
-              "src/web.config"
+              "src/web.config",
+              "src/silent-refresh.html"
             ],
             "styles": ["src/main.scss", "node_modules/datatables.net-dt/css/jquery.dataTables.css"],
             "scripts": ["node_modules/jquery/dist/jquery.js", "node_modules/datatables.net/js/jquery.dataTables.js"],

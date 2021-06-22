@@ -5,6 +5,8 @@ import { ApiHttpService } from '@app/services/api-http.service';
 import { ApiEndpointsService } from '@app/services/api-endpoints.service';
 import { DataTablesResponse } from '@shared/classes/data-tables-response';
 import { Logger } from '@core';
+import { AuthService } from '@core/auth.service';
+//import { Observable } from 'rxjs';
 
 const log = new Logger('Master');
 @Component({
@@ -16,17 +18,35 @@ export class MasterComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   positions: Position[];
   message = '';
+  // isAuthenticated: Observable<boolean>;
+  // isDoneLoading: Observable<boolean>;
+  // canActivateProtectedRoutes: Observable<boolean>;
 
-  constructor(private apiHttpService: ApiHttpService, private apiEndpointsService: ApiEndpointsService) {}
-
-  someClickHandler(info: any): void {
-    this.message = info.id + ' - ' + info.firstName;
-    log.debug(this.message);
-  }
+  constructor(
+    private apiHttpService: ApiHttpService,
+    private apiEndpointsService: ApiEndpointsService,
+    private authService: AuthService) {
+      // this.isAuthenticated = this.authService.isAuthenticated$;
+      // this.isDoneLoading = this.authService.isDoneLoading$;
+      // this.canActivateProtectedRoutes = this.authService.canActivateProtectedRoutes$;
+      // this.authService.runInitialLoginSequence();
+    }
 
   wholeRowClick(position: Position): void {
-    console.log('Whole row clicked.', position);
+    log.debug('Whole row clicked.', position);
   }
+
+  login(){
+    this.authService.login();
+    log.debug('login button click');
+    log.debug(this.authService.accessToken);
+    log.debug(this.authService.idToken);
+
+  }
+  logout() { this.authService.logout(); }
+
+  get accessToken() { return this.authService.accessToken; }
+
 
   ngOnInit() {
     this.dtOptions = {
@@ -68,18 +88,6 @@ export class MasterComponent implements OnInit {
           data: 'positionSalary',
         },
       ],
-      // rowCallback: (row: Node, data: any[] | Object, index: number) => {
-      //   const self = this;
-      //   // Unbind first in order to avoid any duplicate handler
-      //   // (see https://github.com/l-lin/angular-datatables/issues/87)
-      //   // Note: In newer jQuery v3 versions, `unbind` and `bind` are
-      //   // deprecated in favor of `off` and `on`
-      //   $('td', row).off('click');
-      //   $('td', row).on('click', () => {
-      //     self.someClickHandler(data);
-      //   });
-      //   return row;
-      // }
     };
   }
 }

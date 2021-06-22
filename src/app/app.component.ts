@@ -9,6 +9,9 @@ import { environment } from '@env/environment';
 import { Logger, UntilDestroy, untilDestroyed } from '@core';
 import { I18nService } from '@app/i18n';
 
+import { Observable } from 'rxjs';
+import { AuthService } from '@core/auth.service';
+
 const log = new Logger('App');
 
 @UntilDestroy()
@@ -18,13 +21,23 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
+  isAuthenticated: Observable<boolean>;
+  isDoneLoading: Observable<boolean>;
+  canActivateProtectedRoutes: Observable<boolean>;
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private translateService: TranslateService,
-    private i18nService: I18nService
-  ) {}
+    private i18nService: I18nService,
+    private authService: AuthService,
+  ) {
+    this.isAuthenticated = this.authService.isAuthenticated$;
+    this.isDoneLoading = this.authService.isDoneLoading$;
+    this.canActivateProtectedRoutes = this.authService.canActivateProtectedRoutes$;
+    this.authService.runInitialLoginSequence();
+  }
 
   ngOnInit() {
     // Setup logger
