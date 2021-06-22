@@ -11,7 +11,7 @@ import { ErrorHandlerInterceptor } from './http/error-handler.interceptor';
 import { Constants } from '../config/constants';
 
 import { AuthConfig, OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
-import { authConfig } from '../auth/auth-config';
+import { authConfig } from './auth-config';
 import { AuthGuardWithForcedLogin } from './auth-guard-with-forced-login.service';
 import { AuthGuard } from './auth-guard.service';
 import { authModuleConfig } from './auth-module-config';
