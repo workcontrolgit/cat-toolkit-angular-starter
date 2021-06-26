@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularcrud": {
+    "CATToolkitAngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -77,11 +77,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularcrud:build"
+            "browserTarget": "CATToolkitAngular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularcrud:build:production"
+              "browserTarget": "CATToolkitAngular:build:production"
             },
             "ci": {
               "progress": false
@@ -91,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularcrud:build"
+            "browserTarget": "CATToolkitAngular:build"
           }
         },
         "test": {
@@ -129,16 +129,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularcrud:serve"
+            "devServerTarget": "CATToolkitAngular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularcrud:serve:production"
+              "devServerTarget": "CATToolkitAngular:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angularcrud"
+  "defaultProject": "CATToolkitAngular"
 }

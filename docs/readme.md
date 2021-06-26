@@ -1,4 +1,4 @@
-# angularcrud
+# CATToolkitAngular
 
 Welcome to the project documentation!
 

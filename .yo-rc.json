@@ -8,7 +8,7 @@
       "skipQuickstart": false,
       "initGit": true,
       "usePrefix": true,
-      "appName": "angularcrud",
+      "appName": "CATToolkitAngular",
       "target": ["web"],
       "pwa": true,
       "ui": "bootstrap",
@@ -19,7 +19,7 @@
       "tools": ["prettier", "hads"],
       "utility": [],
       "deploy": "none",
-      "projectName": "angularcrud",
+      "projectName": "CATToolkitAngular",
       "packageManager": "npm",
       "mobile": [],
       "desktop": []
