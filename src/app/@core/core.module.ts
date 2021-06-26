@@ -17,6 +17,7 @@ import { AuthGuard } from './auth-guard.service';
 import { authModuleConfig } from './auth-module-config';
 import { AuthService } from './auth.service';
 
+
 // We need a factory since localStorage is not available at AOT build time
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function storageFactory(): OAuthStorage {
@@ -29,7 +30,8 @@ export function storageFactory(): OAuthStorage {
     HttpClientModule,
     OAuthModule.forRoot(),
     TranslateModule,
-    RouterModule],
+    RouterModule
+  ],
   providers: [
     AuthService,
     AuthGuard,
