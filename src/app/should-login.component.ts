@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
+import { AuthService } from '@core/auth.service';
+import { environment } from '@env/environment';
 
 @Component({
   selector: 'app-should-login',
-  template: `<p class="alert alert-dark">You need to be logged in to view requested page.</p>
-    <p>Please <a href="#" (click)="login($event)">log in</a> before continuing.</p>`,
+  templateUrl: './should-login.component.html',
+  styleUrls: ['./should-login.component.scss'],
 })
 export class ShouldLoginComponent {
-  constructor(private authService: OAuthService) { }
+  version: string | null = environment.version;
+  constructor(private authService: AuthService, private oAuthService: OAuthService) {
+  }
 
   public login($event: any) {
     $event.preventDefault();
-    this.authService.initLoginFlow();
+    this.oAuthService.initLoginFlow();
   }
 }

@@ -1,6 +1,5 @@
 import { Routes, Route } from '@angular/router';
 import { AuthGuard } from '@core/auth-guard.service';
-
 import { AuthGuardWithForcedLogin } from '@core/auth-guard-with-forced-login.service';
 import { ShellComponent } from './shell.component';
 
@@ -18,7 +17,7 @@ export class Shell {
       path: '',
       component: ShellComponent,
       children: routes,
-      canActivate: [AuthGuardWithForcedLogin],
+      canActivate: [AuthGuard],
     };
   }
 }

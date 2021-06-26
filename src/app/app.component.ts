@@ -22,8 +22,6 @@ const log = new Logger('App');
 })
 export class AppComponent implements OnInit, OnDestroy {
   isAuthenticated: Observable<boolean>;
-  isDoneLoading: Observable<boolean>;
-  canActivateProtectedRoutes: Observable<boolean>;
 
   constructor(
     private router: Router,
@@ -34,8 +32,6 @@ export class AppComponent implements OnInit, OnDestroy {
     private authService: AuthService,
   ) {
     this.isAuthenticated = this.authService.isAuthenticated$;
-    this.isDoneLoading = this.authService.isDoneLoading$;
-    this.canActivateProtectedRoutes = this.authService.canActivateProtectedRoutes$;
     this.authService.runInitialLoginSequence();
   }
 
@@ -72,6 +68,9 @@ export class AppComponent implements OnInit, OnDestroy {
           this.titleService.setTitle(this.translateService.instant(title));
         }
       });
+
+
+
   }
 
   ngOnDestroy() {
