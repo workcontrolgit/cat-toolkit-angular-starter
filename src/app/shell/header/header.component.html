@@ -13,13 +13,21 @@
     </button>
     <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
       <div class="navbar-nav">
-        <a class="nav-item nav-link text-uppercase" routerLink="/master" routerLinkActive="active">
+        <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">
           <i class="fas fa-home"></i>
-          <span translate>Master</span>
+          <span translate>Home</span>
         </a>
-        <a class="nav-item nav-link text-uppercase" routerLink="/detail" routerLinkActive="active">
-          <i class="fas fa-question-circle"></i>
+        <a class="nav-item nav-link" routerLink="/master" routerLinkActive="active">
+          <i class="fas fa-list"></i>
+          <span translate>Position</span>
+        </a>
+        <!-- <a class="nav-item nav-link text-uppercase" routerLink="/detail" routerLinkActive="active">
+          <i class="fab fa-wpforms"></i>
           <span translate>Detail</span>
+        </a> -->
+        <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i>
+          <span translate>About</span>
         </a>
       </div>
       <div class="navbar-nav ml-auto">

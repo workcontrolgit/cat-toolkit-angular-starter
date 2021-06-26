@@ -5,7 +5,9 @@ import { ShouldLoginComponent } from './should-login.component';
 
 const routes: Routes = [
   Shell.childRoutes([
-    { path: 'detail', loadChildren: () => import('./detail/detail.module').then((m) => m.DetailModule) },
+    { path: 'about', loadChildren: () => import('./about/about.module').then((m) => m.AboutModule) },
+    { path: 'detail', loadChildren: () => import('./features/position/detail/detail.module').then((m) => m.DetailModule) },
+    { path: 'master', loadChildren: () => import('./features/position/master/master.module').then((m) => m.MasterModule) },
   ]),
   { path: 'should-login', component: ShouldLoginComponent },
   // Fallback when no prior route is matched

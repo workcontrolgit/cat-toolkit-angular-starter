@@ -9,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from '@env/environment';
 import { CoreModule } from '@core';
 import { SharedModule } from '@shared';
-import { MasterModule } from './master/master.module';
+import { HomeModule } from './home/home.module';
+//import { MasterModule } from './features/position/master/master.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +27,8 @@ import { ShouldLoginComponent } from './should-login.component';
     CoreModule.forRoot(),
     SharedModule,
     ShellModule,
-    MasterModule,
+    //MasterModule,
+    HomeModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [
