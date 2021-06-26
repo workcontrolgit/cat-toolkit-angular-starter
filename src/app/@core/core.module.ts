@@ -10,12 +10,13 @@ import { ErrorHandlerInterceptor } from './http/error-handler.interceptor';
 
 import { Constants } from '../config/constants';
 
+// OIDC Integration
 import { AuthConfig, OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
-import { authConfig } from './auth-config';
-import { AuthGuardWithForcedLogin } from './auth-guard-with-forced-login.service';
-import { AuthGuard } from './auth-guard.service';
-import { authModuleConfig } from './auth-module-config';
-import { AuthService } from './auth.service';
+import { authConfig } from './auth/auth-config';
+import { AuthGuardWithForcedLogin } from './auth/auth-guard-with-forced-login.service';
+import { AuthGuard } from './auth/auth-guard.service';
+import { authModuleConfig } from './auth/auth-module-config';
+import { AuthService } from './auth/auth.service';
 
 
 // We need a factory since localStorage is not available at AOT build time

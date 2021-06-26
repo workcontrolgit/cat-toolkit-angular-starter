@@ -10,7 +10,7 @@ import { Logger, UntilDestroy, untilDestroyed } from '@core';
 import { I18nService } from '@app/i18n';
 
 import { Observable } from 'rxjs';
-import { AuthService } from '@core/auth.service';
+import { AuthService } from '@app/@core/auth/auth.service';
 
 const log = new Logger('App');
 

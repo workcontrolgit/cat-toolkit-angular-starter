@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { AuthService } from '@core/auth.service';
+import { AuthService } from '@app/@core/auth/auth.service';
 import { environment } from '@env/environment';
 
 @Component({

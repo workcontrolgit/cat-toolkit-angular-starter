@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { AuthService } from '@core/auth.service';
+import { AuthService } from '@app/@core/auth/auth.service';
 
 @Component({
   selector: 'app-header',

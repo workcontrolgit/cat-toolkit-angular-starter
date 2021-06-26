@@ -5,7 +5,7 @@ import { ApiHttpService } from '@app/services/api-http.service';
 import { ApiEndpointsService } from '@app/services/api-endpoints.service';
 import { DataTablesResponse } from '@shared/classes/data-tables-response';
 import { Logger } from '@core';
-import { AuthService } from '@core/auth.service';
+import { AuthService } from '@app/@core/auth/auth.service';
 //import { Observable } from 'rxjs';
 
 const log = new Logger('Master');

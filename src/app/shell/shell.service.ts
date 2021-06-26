@@ -1,6 +1,6 @@
 import { Routes, Route } from '@angular/router';
-import { AuthGuard } from '@core/auth-guard.service';
-import { AuthGuardWithForcedLogin } from '@core/auth-guard-with-forced-login.service';
+import { AuthGuard } from '@app/@core/auth/auth-guard.service';
+import { AuthGuardWithForcedLogin } from '@app/@core/auth/auth-guard-with-forced-login.service';
 import { ShellComponent } from './shell.component';
 
 /**
