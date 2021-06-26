@@ -1,0 +1,26 @@
+
+
+
+<div class="login-container bg-light">
+  <div class="login-box">
+    <h1 translate>APP_NAME</h1>
+    <div>
+      <h6 class="d-inline-block">v{{ version }}</h6>
+      <div class="d-inline-block ml-3"></div>
+    </div>
+    <div class="container">
+      <div class="card col-md-6 mt-3 mx-auto">
+        <div class="card-body">
+          <h4 class="card-title text-center">
+            <i class="far fa-3x fa-user-circle text-muted"></i>
+          </h4>
+          <p class="alert alert-dark">You need to be logged in to view requested page. Please log in before continuing.</p>
+          <button class="btn btn-primary w-100" (click)="login($event)">
+            <span translate>Login</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

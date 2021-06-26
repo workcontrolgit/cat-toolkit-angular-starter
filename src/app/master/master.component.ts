@@ -25,28 +25,12 @@ export class MasterComponent implements OnInit {
   constructor(
     private apiHttpService: ApiHttpService,
     private apiEndpointsService: ApiEndpointsService,
-    private authService: AuthService) {
-      // this.isAuthenticated = this.authService.isAuthenticated$;
-      // this.isDoneLoading = this.authService.isDoneLoading$;
-      // this.canActivateProtectedRoutes = this.authService.canActivateProtectedRoutes$;
-      // this.authService.runInitialLoginSequence();
+    ) {
     }
 
   wholeRowClick(position: Position): void {
     log.debug('Whole row clicked.', position);
   }
-
-  login(){
-    this.authService.login();
-    log.debug('login button click');
-    log.debug(this.authService.accessToken);
-    log.debug(this.authService.idToken);
-
-  }
-  logout() { this.authService.logout(); }
-
-  get accessToken() { return this.authService.accessToken; }
-
 
   ngOnInit() {
     this.dtOptions = {

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { AuthService } from '@core/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menuHidden = true;
+  isAuthenticated: Observable<boolean>;
 
-  constructor() {}
+  constructor(private authService: AuthService) {
+    this.isAuthenticated = authService.isAuthenticated$;
+  }
 
   ngOnInit() {}
 
   toggleMenu() {
     this.menuHidden = !this.menuHidden;
   }
+
+
+  login() {
+    this.authService.login();
+   }
+
+  logout() {
+    //this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
+    this.authService.logout();
+  }
+
+  // get username(): string | null {
+  //   this.profileData$ = this.authService.;
+  //   this.profileData$.subscribe((data) => {
+  //     this.name = data.name;
+  //     //console.log (this.name)
+  //   });
+  //   return this.name ? this.name : null;
+  // }
+
+  get username(): string {
+    return this.authService.identityClaims
+    ? (this.authService.identityClaims as any)['email']
+    : '-';
+  }
+
 }

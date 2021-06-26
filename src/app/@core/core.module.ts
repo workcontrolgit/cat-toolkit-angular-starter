@@ -11,11 +11,12 @@ import { ErrorHandlerInterceptor } from './http/error-handler.interceptor';
 import { Constants } from '../config/constants';
 
 import { AuthConfig, OAuthModule, OAuthModuleConfig, OAuthStorage } from 'angular-oauth2-oidc';
-import { authConfig } from '../auth/auth-config';
+import { authConfig } from './auth-config';
 import { AuthGuardWithForcedLogin } from './auth-guard-with-forced-login.service';
 import { AuthGuard } from './auth-guard.service';
 import { authModuleConfig } from './auth-module-config';
 import { AuthService } from './auth.service';
+
 
 // We need a factory since localStorage is not available at AOT build time
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
@@ -29,7 +30,8 @@ export function storageFactory(): OAuthStorage {
     HttpClientModule,
     OAuthModule.forRoot(),
     TranslateModule,
-    RouterModule],
+    RouterModule
+  ],
   providers: [
     AuthService,
     AuthGuard,

@@ -25,6 +25,20 @@
       <div class="navbar-nav ml-auto">
         <app-language-selector inNavbar="true" menuClass="dropdown-menu dropdown-menu-right"></app-language-selector>
       </div>
+
+      <div class="nav-item" ngbDropdown>
+        <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
+          <i class="fas fa-user-circle"></i>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="user-dropdown" class="dropdown-menu dropdown-menu-right">
+          <h6 class="dropdown-header" *ngIf="(isAuthenticated | async) === true">
+            <span translate>Logged in as</span> <b>{{ username }}</b>
+          </h6>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" (click)="logout()" translate *ngIf="(isAuthenticated | async) === true">Logout</button>
+          <button class="dropdown-item" (click)="login()" *ngIf="(isAuthenticated | async) === false">Login</button>
+        </div>
+      </div>
     </div>
   </nav>
 </header>

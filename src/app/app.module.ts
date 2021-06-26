@@ -15,7 +15,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FallbackComponent } from './fallback.component';
 import { ShouldLoginComponent } from './should-login.component';
-//import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     BrowserModule,
@@ -28,12 +27,6 @@ import { ShouldLoginComponent } from './should-login.component';
     SharedModule,
     ShellModule,
     MasterModule,
-  //   RouterModule.forRoot([
-  //     { path: '', redirectTo: 'home', pathMatch: 'full' },
-  //     // Note: this way of module loading requires this in your tsconfig.json: "module": "esnext"
-  //     { path: 'should-login', component: ShouldLoginComponent },
-  //     { path: '**', component: FallbackComponent },
-  // ], { relativeLinkResolution: 'legacy' }),
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [
