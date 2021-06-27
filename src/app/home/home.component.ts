@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators';
-
-import { QuoteService } from './quote.service';
+import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  providers: [NgbCarouselConfig]  // add NgbCarouselConfig to the component providers
 })
 export class HomeComponent implements OnInit {
-  quote: string | undefined;
-  isLoading = false;
+  showNavigationArrows = true;
+  showNavigationIndicators = true;
+  images = [1027, 604, 660, 828, 959].map((n) => `https://picsum.photos/id/${n}/1920/1080`);
 
-  constructor(private quoteService: QuoteService) {}
+  constructor() {
+  }
 
   ngOnInit() {
   }
