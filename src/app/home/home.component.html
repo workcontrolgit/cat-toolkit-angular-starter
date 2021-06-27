@@ -1,8 +1,44 @@
 <div class="container-fluid">
-  <div class="jumbotron text-center">
+  <!-- <div class="jumbotron text-center">
     <h1>
       <span translate>Welcome Angular developers!</span>
     </h1>
     <img src="https://farm3.staticflickr.com/2634/4462120219_9cc1796f9c_o.jpg" class="img-fluid" alt="Responsive image">
-  </div>
+  </div> -->
+  <!-- <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" class="d-block w-100">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide" class="d-block w-100">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide" class="d-block w-100">
+      </div>
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel> -->
+  <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <img [src]="image" alt="Random slide" class="d-block w-100">
+      </div>
+    </ng-template>
+  </ngb-carousel>
 </div>

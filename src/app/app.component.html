@@ -1,9 +1,10 @@
-<div *ngIf="isAuthenticated | async as isAuthenticated; else noAuth">
+<router-outlet></router-outlet> <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+<!-- <div *ngIf="isAuthenticated | async as isAuthenticated; else noAuth">
   <router-outlet></router-outlet> <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
-</div>
+</div> -->
 
-<ng-template #noAuth>
+<!-- <ng-template #noAuth>
   <app-should-login></app-should-login>
-</ng-template>
+</ng-template> -->
 
 

@@ -9,7 +9,13 @@ import { DataTablesModule } from 'angular-datatables';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, TranslateModule, SharedModule, MasterRoutingModule, DataTablesModule, FormsModule],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SharedModule,
+    MasterRoutingModule,
+    DataTablesModule,
+    FormsModule],
   declarations: [MasterComponent],
 })
 export class MasterModule {}

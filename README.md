@@ -35,6 +35,7 @@ src/                         project source code
 |  |- app.module.ts          app root module definition
 |  |- app-routing.module.ts  app routes
 |  +- ...                    additional modules and components
+|- features/                 application features
 |- assets/                   app assets (images, fonts, sounds...)
 |- environments/             values for various build environments
 |- theme/                    app global scss variables and theme

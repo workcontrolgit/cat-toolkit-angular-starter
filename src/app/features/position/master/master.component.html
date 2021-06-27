@@ -23,7 +23,7 @@
             <tr *ngFor="let position of positions" (click)="wholeRowClick(position)">
               <td>
                 <!-- Hyperlink position number with routerLink and position Id parameter -->
-                <a [routerLink]="['/detail', position.id]">{{ position.positionNumber }}</a>
+                <a [routerLink]="['/position/detail', position.id]">{{ position.positionNumber }}</a>
               </td>
               <td>{{ position.positionTitle }}</td>
               <td>{{ position.positionDescription }}</td>
@@ -38,6 +38,6 @@
         </table>
       </div>
     </div>
-    <div class="card-footer">*Searchable columns are Number, Title and Description</div>
+    <div class="card-footer">Hint:  Searchable columns are Number, Title and Description</div>
   </div>
 </div>
