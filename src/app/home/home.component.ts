@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
+import { Logger} from '@core';
+
+const log = new Logger('App');
 
 @Component({
   selector: 'app-home',
@@ -16,5 +19,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 }

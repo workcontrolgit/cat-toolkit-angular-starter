@@ -5,22 +5,17 @@ import { ApiHttpService } from '@app/services/api-http.service';
 import { ApiEndpointsService } from '@app/services/api-endpoints.service';
 import { DataTablesResponse } from '@shared/classes/data-tables-response';
 import { Logger } from '@core';
-import { AuthService } from '@app/@core/auth/auth.service';
-//import { Observable } from 'rxjs';
 
-const log = new Logger('Master');
+const log = new Logger('Position');
 @Component({
-  selector: 'app-master',
-  templateUrl: './master.component.html',
-  styleUrls: ['./master.component.scss'],
+  selector: 'app-position',
+  templateUrl: './position.component.html',
+  styleUrls: ['./position.component.scss']
 })
-export class MasterComponent implements OnInit {
+export class PositionComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   positions: Position[];
   message = '';
-  // isAuthenticated: Observable<boolean>;
-  // isDoneLoading: Observable<boolean>;
-  // canActivateProtectedRoutes: Observable<boolean>;
 
   constructor(
     private apiHttpService: ApiHttpService,
@@ -75,3 +70,4 @@ export class MasterComponent implements OnInit {
     };
   }
 }
+
