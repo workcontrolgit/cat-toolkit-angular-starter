@@ -10,12 +10,13 @@ import { environment } from '@env/environment';
 import { CoreModule } from '@core';
 import { SharedModule } from '@shared';
 import { HomeModule } from './home/home.module';
-//import { MasterModule } from './features/position/master/master.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FallbackComponent } from './fallback.component';
 import { ShouldLoginComponent } from './should-login.component';
+
+import { NgHttpLoaderModule } from 'ng-http-loader';
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,11 +24,11 @@ import { ShouldLoginComponent } from './should-login.component';
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot(),
+    NgHttpLoaderModule.forRoot(),
     NgbModule,
     CoreModule.forRoot(),
     SharedModule,
     ShellModule,
-    //MasterModule,
     HomeModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
