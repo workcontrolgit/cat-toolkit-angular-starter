@@ -43,6 +43,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     log.debug('init');
 
+  
     // Setup translations
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 

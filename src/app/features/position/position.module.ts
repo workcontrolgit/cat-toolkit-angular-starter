@@ -1,27 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-
 import { SharedModule } from '@shared';
 
-import { DetailRoutingModule } from './detail-routing.module';
-import { DetailComponent } from './detail.component';
+import { PositionRoutingModule } from './position-routing.module';
+import { PositionComponent } from './position.component';
+import { DetailComponent } from './detail/detail.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
-//import { ToastComponent } from '@shared/toast/toast.component';
-//import { ToastsContainer } from './toasts-container.component';
+import { DataTablesModule } from 'angular-datatables';
+
 
 @NgModule({
+  declarations: [
+    PositionComponent,
+    DetailComponent
+  ],
   imports: [
     CommonModule,
     TranslateModule,
-    DetailRoutingModule,
+    PositionRoutingModule,
     ReactiveFormsModule,
     SharedModule,
     RxReactiveFormsModule,
-  ],
-  declarations: [DetailComponent],
+    DataTablesModule,
+  ]
 })
-export class DetailModule {}
+export class PositionModule { }
