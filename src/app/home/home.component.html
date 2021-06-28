@@ -1,8 +1,12 @@
 <div class="container-fluid">
-  <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+  <ngb-carousel
+    *ngIf="images"
+    [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="showNavigationIndicators"
+  >
     <ng-template ngbSlide *ngFor="let image of images">
       <div class="picsum-img-wrapper">
-        <img [src]="image" alt="Random slide" class="d-block w-100">
+        <img [src]="image" alt="Random slide" class="d-block w-100" />
       </div>
     </ng-template>
   </ngb-carousel>

@@ -9,8 +9,14 @@ const routes: Routes = [
     //{ path: 'detail', loadChildren: () => import('./features/position/detail/detail.module').then((m) => m.DetailModule) },
     //{ path: 'position/master', loadChildren: () => import('./features/position/master/master.module').then((m) => m.MasterModule) },
     //{ path: 'position/detail', loadChildren: () => import('./features/position/detail/detail.module').then((m) => m.DetailModule) },
-    { path: 'employee', loadChildren: () => import('./features/employee/employee.module').then(m => m.EmployeeModule) },
-    { path: 'position', loadChildren: () => import('./features/position/position.module').then(m => m.PositionModule) },
+    {
+      path: 'employee',
+      loadChildren: () => import('./features/employee/employee.module').then((m) => m.EmployeeModule),
+    },
+    {
+      path: 'position',
+      loadChildren: () => import('./features/position/position.module').then((m) => m.PositionModule),
+    },
   ]),
   ShellPublic.childRoutes([
     // { path: 'home', loadChildren: () => import('./about/about.module').then((m) => m.AboutModule) },

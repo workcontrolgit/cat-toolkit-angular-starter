@@ -10,8 +10,7 @@ import { environment } from '@env/environment';
 })
 export class ShouldLoginComponent {
   version: string | null = environment.version;
-  constructor(private authService: AuthService, private oAuthService: OAuthService) {
-  }
+  constructor(private authService: AuthService, private oAuthService: OAuthService) {}
 
   public login($event: any) {
     $event.preventDefault();

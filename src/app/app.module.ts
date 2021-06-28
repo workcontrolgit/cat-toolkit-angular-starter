@@ -31,11 +31,7 @@ import { ShouldLoginComponent } from './should-login.component';
     HomeModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
-  declarations: [
-    AppComponent,
-    FallbackComponent,
-    ShouldLoginComponent,
-  ],
+  declarations: [AppComponent, FallbackComponent, ShouldLoginComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

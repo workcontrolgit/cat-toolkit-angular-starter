@@ -14,8 +14,7 @@ export class AboutComponent implements OnInit {
   idToken: string;
   identityClaims: any;
 
-
-  constructor(private authService: AuthService,) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit() {
     this.accessToken = this.authService.accessToken;

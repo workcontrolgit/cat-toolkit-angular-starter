@@ -44,7 +44,9 @@
             <span translate>Logged in as</span> <b>{{ username }}</b>
           </h6>
           <div class="dropdown-divider"></div>
-          <button class="dropdown-item" (click)="logout()" translate *ngIf="(isAuthenticated | async) === true">Logout</button>
+          <button class="dropdown-item" (click)="logout()" translate *ngIf="(isAuthenticated | async) === true">
+            Logout
+          </button>
           <button class="dropdown-item" (click)="login()" *ngIf="(isAuthenticated | async) === false">Login</button>
         </div>
       </div>

@@ -5,12 +5,12 @@ import { DetailComponent } from './detail/detail.component';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 
 const routes: Routes = [
-  { path: '', component: EmployeeComponent, data: { title: marker('Employee') }  },
-  { path: 'detail', component: DetailComponent, data: { title: marker('Employee Detail') }  },
+  { path: '', component: EmployeeComponent, data: { title: marker('Employee') } },
+  { path: 'detail', component: DetailComponent, data: { title: marker('Employee Detail') } },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EmployeeRoutingModule { }
+export class EmployeeRoutingModule {}

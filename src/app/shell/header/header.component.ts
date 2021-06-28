@@ -22,10 +22,9 @@ export class HeaderComponent implements OnInit {
     this.menuHidden = !this.menuHidden;
   }
 
-
   login() {
     this.authService.login();
-   }
+  }
 
   logout() {
     //this.authenticationService.logout().subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
@@ -42,9 +41,6 @@ export class HeaderComponent implements OnInit {
   // }
 
   get username(): string {
-    return this.authService.identityClaims
-    ? (this.authService.identityClaims as any)['email']
-    : '-';
+    return this.authService.identityClaims ? (this.authService.identityClaims as any)['email'] : '-';
   }
-
 }
