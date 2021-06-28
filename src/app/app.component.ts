@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private titleService: Title,
     private translateService: TranslateService,
     private i18nService: I18nService,
-    private authService: AuthService,
+    private authService: AuthService
   ) {
     this.isAuthenticated = this.authService.isAuthenticated$;
     this.authService.runInitialLoginSequence();
@@ -43,7 +43,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
     log.debug('init');
 
-  
     // Setup translations
     this.i18nService.init(environment.defaultLanguage, environment.supportedLanguages);
 
@@ -69,9 +68,6 @@ export class AppComponent implements OnInit, OnDestroy {
           this.titleService.setTitle(this.translateService.instant(title));
         }
       });
-
-
-
   }
 
   ngOnDestroy() {

@@ -14,7 +14,7 @@ export class ShellPublic {
     return {
       path: '',
       component: ShellComponent,
-      children: routes
+      children: routes,
     };
   }
 }

@@ -10,18 +10,14 @@ const log = new Logger('Position');
 @Component({
   selector: 'app-position',
   templateUrl: './position.component.html',
-  styleUrls: ['./position.component.scss']
+  styleUrls: ['./position.component.scss'],
 })
 export class PositionComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   positions: Position[];
   message = '';
 
-  constructor(
-    private apiHttpService: ApiHttpService,
-    private apiEndpointsService: ApiEndpointsService,
-    ) {
-    }
+  constructor(private apiHttpService: ApiHttpService, private apiEndpointsService: ApiEndpointsService) {}
 
   wholeRowClick(position: Position): void {
     log.debug('Whole row clicked.', position);
@@ -70,4 +66,3 @@ export class PositionComponent implements OnInit {
     };
   }
 }
-

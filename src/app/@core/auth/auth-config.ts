@@ -4,7 +4,7 @@ import { environment } from '@env/environment';
 export const authConfig: AuthConfig = {
   //issuer: 'https://localhost:44354', //this is for IdentityServer4 running on localhost
   //issuer: 'https://localhost:44310', //this is for IdentityServer4 Admin UI running on localhost
-  issuer: environment.Oidc_Issuer,  //demo identityserver4 in Azure
+  issuer: environment.Oidc_Issuer, //demo identityserver4 in Azure
   clientId: environment.Oidc_ClientId, // client id setup in IdentityServer4
   responseType: 'code', //code flow PKCE
   redirectUri: window.location.origin + '/auth-callback',
@@ -17,5 +17,5 @@ export const authConfig: AuthConfig = {
   sessionChecksEnabled: true,
   showDebugInformation: true, // Also requires enabling "Verbose" level in devtools
   clearHashAfterLogin: false, // https://github.com/manfredsteyer/angular-oauth2-oidc/issues/457#issuecomment-431807040,
-  nonceStateSeparator : 'semicolon' // Real semicolon gets mangled by IdentityServer's URI encoding
+  nonceStateSeparator: 'semicolon', // Real semicolon gets mangled by IdentityServer's URI encoding
 };
