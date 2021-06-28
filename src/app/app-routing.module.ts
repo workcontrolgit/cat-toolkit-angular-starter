@@ -9,6 +9,7 @@ const routes: Routes = [
     //{ path: 'detail', loadChildren: () => import('./features/position/detail/detail.module').then((m) => m.DetailModule) },
     { path: 'position/master', loadChildren: () => import('./features/position/master/master.module').then((m) => m.MasterModule) },
     { path: 'position/detail', loadChildren: () => import('./features/position/detail/detail.module').then((m) => m.DetailModule) },
+    { path: 'employee', loadChildren: () => import('./features/employee/employee.module').then(m => m.EmployeeModule) },
   ]),
   { path: 'should-login', component: ShouldLoginComponent },
   // Fallback when no prior route is matched

@@ -18,6 +18,8 @@ export const environment = {
   supportedLanguages: ['en-US'],
   Api_Endpoint: 'https://cat-netcore-api.azurewebsites.net/api/v1',
   Api_Mock_Endpoint: 'https://angular-datatables-demo-server.herokuapp.com',
+  Oidc_Issuer:'https://cat-token-identity.azurewebsites.net',
+  Oidc_ClientId:'AngularStarterKit',
 };
 
 /*
