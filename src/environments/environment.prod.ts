@@ -12,12 +12,12 @@ export const environment = {
   serverUrl: 'https://api.chucknorris.io',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US'],
-  //REST API server
+  // REST API server
   Api_Endpoint: 'https://cat-netcore-api.azurewebsites.net/api/v1',
   Api_Mock_Endpoint: 'https://angular-datatables-demo-server.herokuapp.com',
 
-  //IdentityServer/OIDC Configuration
-  //Oidc_Issuer: 'https://localhost:44310',  //this is for IdentityServer4 Admin UI running on localhost
+  // IdentityServer/OIDC Configuration
+  // Oidc_Issuer: 'https://localhost:44310',  //this is for IdentityServer4 Admin UI running on localhost
   Oidc_Issuer: 'https://cat-token-identity.azurewebsites.net', //demo identityserver4 in Azure
   Oidc_ClientId: 'AngularStarterKit', // client id setup in IdentityServer4
   Oidc_responseType: 'code', //code flow PKCE,
