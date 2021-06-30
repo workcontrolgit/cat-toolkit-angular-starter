@@ -1,4 +1,6 @@
 <div class="container-fluid">
+  <app-dashboard></app-dashboard>
+
   <ngb-carousel
     *ngIf="images"
     [showNavigationArrows]="showNavigationArrows"
@@ -7,6 +9,12 @@
     <ng-template ngbSlide *ngFor="let image of images">
       <div class="picsum-img-wrapper">
         <img [src]="image" alt="Random slide" class="d-block w-100" />
+      </div>
+      <div class="carousel-caption">
+        <blockquote class="blockquote">
+          <h3>You don’t need to have a 100-person company to develop that idea.</h3>
+          <footer class="blockquote-footer">Larry Page, <cite title="Source Title">co-founder of Google</cite></footer>
+        </blockquote>
       </div>
     </ng-template>
   </ngb-carousel>
