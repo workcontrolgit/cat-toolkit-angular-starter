@@ -1,0 +1,32 @@
+<div *ngFor="let item of itemList">
+  <div class="card-deck my-3">
+    <div class="card">
+      <a class="card-link" routerLink="/position">
+        <div class="card-body card-body-small">
+          <i class="fas fa-clipboard-list fa-2x text-primary"></i>
+          <h2 class="d-flex pl-3 font-weight-light float-right">{{ item.position_count }}</h2>
+          <h4 class="card-title pt-1 pb-0 text-dark">Positions</h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="card">
+      <a class="card-link" routerLink="/employee">
+        <div class="card-body">
+          <i class="fas fa-users fa-2x text-secondary"></i>
+          <h2 class="d-flex pl-3 font-weight-light float-right text-dark">{{ item.employee_count }}</h2>
+          <h4 class="card-title pt-1 pb-0 text-dark">Employees</h4>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a class="card-link" routerLink="/assignment">
+        <div class="card-body">
+          <i class="fas fa-tags fa-2x text-success"></i>
+          <h2 class="d-flex pl-3 font-weight-light float-right text-dark">{{ item.assignment_count }}</h2>
+          <h4 class="card-title pt-1 pb-0 text-dark">Assignments</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
