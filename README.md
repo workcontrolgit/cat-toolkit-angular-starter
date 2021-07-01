@@ -1,6 +1,6 @@
 # Scrum and Coke Publication
 
-This repository is for Medium story [Angular 11 CRUD 100,000+ Rows](https://medium.com/scrum-and-coke/angular-11-crud-100-000-rows-d1db21afc31c)
+This repository is for Medium story [Angular Starter Kit for Fast Prototype](https://medium.com/scrum-and-coke/angular-starter-kit-tutorial-199e51f734bb)
 
 # CATToolkitAngular
 
