@@ -21,8 +21,8 @@ export const environment = {
   Api_Mock_Endpoint: 'https://angular-datatables-demo-server.herokuapp.com',
 
   //IdentityServer/OIDC Configuration
-  Oidc_Issuer: 'https://localhost:44310', //this is for IdentityServer4 Admin UI running on localhost https://github.com/workcontrolgit/TokenProject.AdminUI
-  //Oidc_Issuer: 'https://cat-token-identity.azurewebsites.net', //demo identityserver4 in Azure
+  //Oidc_Issuer: 'https://localhost:44310', //this is for IdentityServer4 Admin UI running on localhost https://github.com/workcontrolgit/TokenProject.AdminUI
+  Oidc_Issuer: 'https://cat-token-identity.azurewebsites.net', //demo identityserver4 in Azure
   Oidc_ClientId: 'AngularStarterKit', // client id setup in IdentityServer4
   Oidc_responseType: 'code', //code flow PKCE, https://github.com/workcontrolgit/TokenProject.AdminUI
   Oidc_redirectUri: window.location.origin + '/auth-callback',
