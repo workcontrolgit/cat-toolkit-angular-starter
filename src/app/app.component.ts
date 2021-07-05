@@ -21,7 +21,7 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  isAuthenticated: Observable<boolean>;
+  //isAuthenticated: Observable<boolean>;
 
   constructor(
     private router: Router,
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
     private i18nService: I18nService,
     private authService: AuthService
   ) {
-    this.isAuthenticated = this.authService.isAuthenticated$;
+    //this.isAuthenticated = this.authService.isAuthenticated$;
     this.authService.runInitialLoginSequence();
   }
 
