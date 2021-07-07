@@ -17,6 +17,7 @@ export const environment = {
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US'],
   //REST API server
+  //Api_Endpoint: 'https://localhost:44378/api/v1',
   Api_Endpoint: 'https://cat-netcore-api.azurewebsites.net/api/v1',
   Api_Mock_Endpoint: 'https://angular-datatables-demo-server.herokuapp.com',
 
