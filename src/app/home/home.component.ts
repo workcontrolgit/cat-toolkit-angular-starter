@@ -13,7 +13,7 @@ const log = new Logger('App');
 export class HomeComponent implements OnInit {
   showNavigationArrows = true;
   showNavigationIndicators = true;
-  images = [1024, 436, 1077, 182, 328].map((n) => `https://picsum.photos/id/${n}/1920/1080`);
+  images = [1077, 10, 1019, 1033, 1043].map((n) => `https://picsum.photos/id/${n}/1920/1080`);
 
   constructor() {}
 

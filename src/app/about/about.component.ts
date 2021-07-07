@@ -13,12 +13,16 @@ export class AboutComponent implements OnInit {
   accessToken: string;
   idToken: string;
   identityClaims: any;
+  profile: any;
+  role: any;
 
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
     this.accessToken = this.authService.accessToken;
     this.idToken = this.authService.idToken;
-    this.identityClaims = JSON.stringify(this.authService.identityClaims);
+    this.profile = this.authService.identityClaims;
+    this.identityClaims = JSON.stringify(this.profile);
+    this.role = JSON.stringify(this.profile.role);
   }
 }
