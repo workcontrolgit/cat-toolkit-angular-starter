@@ -1,11 +1,12 @@
-# Scrum and Coke Publication
+# Project Information
 
-This repository is for Medium story [Angular Starter Kit for Fast Prototype](https://medium.com/scrum-and-coke/angular-starter-kit-tutorial-199e51f734bb)
+- [Angular Starter Kit for Fast Prototype](https://medium.com/scrum-and-coke/angular-starter-kit-tutorial-199e51f734bb) blog
+- [Starter Kit](https://cat-angular-starterkit.azurewebsites.net/home) demo
 
-# CATToolkitAngular
+# Repo Information
 
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 9.2.0
+version 9.2.0 then integrated with OIDC JS Library and added boilerplate code for dashboard, pagination, sort, filter, and CRUD.
 
 # Getting started
 
