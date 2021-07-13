@@ -8,6 +8,11 @@
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 9.2.0 then integrated with OIDC JS Library and added boilerplate code for dashboard, pagination, sort, filter, and CRUD.
 
+# Related Repos
+
+- [Token Service](https://github.com/workcontrolgit/cat-toolkit-tokenservice-starter) contains the NET CORE 5 C# source code of the Secure Token Service (STS) server. The project architecture is based on IdentityServer4 Admin UI.
+- [ApiResources](https://github.com/workcontrolgit/cat-toolkit-apiresources-starter) contains the NET CORE 5 C# source code of the REST API, supporting pagination, sort, filter, and CRUD. The solution was generated using the [TemplateOnionAPI](https://marketplace.visualstudio.com/items?itemName=workcontrol.VSIXTemplateOnionAPI).
+
 # Getting started
 
 1. Go to project folder and install dependencies:
