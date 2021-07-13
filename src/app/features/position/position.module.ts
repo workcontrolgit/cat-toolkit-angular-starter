@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '@shared';
 
 import { PositionRoutingModule } from './position-routing.module';
-import { PositionComponent } from './position.component';
+import { PositionComponent } from './master/position.component';
 import { DetailComponent } from './detail/detail.component';
 
 import { ReactiveFormsModule } from '@angular/forms';

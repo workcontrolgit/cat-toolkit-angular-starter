@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeComponent } from './employee.component';
+import { EmployeeComponent } from './master/employee.component';
 import { DetailComponent } from './detail/detail.component';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 
