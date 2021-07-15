@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Logger } from '@core';
 
-const log = new Logger('App');
+const log = new Logger('app-home');
 
 @Component({
   selector: 'app-home',

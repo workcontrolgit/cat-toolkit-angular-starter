@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
   //   return this.name ? this.name : null;
   // }
 
-  get username(): string {
-    return this.authService.identityClaims ? (this.authService.identityClaims as any)['email'] : '-';
+  get username(): string | null {
+    return this.authService.identityClaims ? (this.authService.identityClaims as any)['email'] : null;
   }
 }

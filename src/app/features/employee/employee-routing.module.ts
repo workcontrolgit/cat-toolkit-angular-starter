@@ -3,10 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from './employee.component';
 import { DetailComponent } from './detail/detail.component';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
+import { AuthGuardWithForcedLogin } from '@app/@core/auth/auth-guard-with-forced-login.service';
 
 const routes: Routes = [
-  { path: '', component: EmployeeComponent, data: { title: marker('Employee') } },
-  { path: 'detail', component: DetailComponent, data: { title: marker('Employee Detail') } },
+  {
+    path: '',
+    component: EmployeeComponent,
+    canActivate: [AuthGuardWithForcedLogin],
+    data: { title: marker('Employee'), role: 'Employee' },
+  },
+  {
+    path: 'detail',
+    component: DetailComponent,
+    canActivate: [AuthGuardWithForcedLogin],
+    data: { title: marker('Employee Detail'), role: 'Employee' },
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { Routes, Route } from '@angular/router';
+import { Routes, Route, ActivatedRoute } from '@angular/router';
 import { AuthGuard } from '@app/@core/auth/auth-guard.service';
 import { AuthGuardWithForcedLogin } from '@app/@core/auth/auth-guard-with-forced-login.service';
 import { ShellComponent } from './shell.component';
@@ -7,6 +7,10 @@ import { ShellComponent } from './shell.component';
  * Provides helper methods to create routes.
  */
 export class Shell {
+  // pageTitle: string;
+  // constructor(
+  //   private route: ActivatedRoute
+  // ) {}
   /**
    * Creates routes using the shell component and authentication.
    * @param routes The routes to add.
@@ -17,7 +21,6 @@ export class Shell {
       path: '',
       component: ShellComponent,
       children: routes,
-      canActivate: [AuthGuardWithForcedLogin],
     };
   }
 }
