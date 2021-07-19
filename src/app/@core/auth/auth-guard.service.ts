@@ -4,14 +4,35 @@ import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
+import { ToastService } from '@app/services/toast.service';
+//import { Logger } from '@core';
+
+//const log = new Logger('AuthGuard');
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService) {}
+  profile: any;
+  constructor(private toastService: ToastService, private authService: AuthService) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     return this.authService.canActivateProtectedRoutes$.pipe(
-      tap((x) => console.log('You tried to go to ' + state.url + ' and this guard said ' + x))
+      tap((canActivateProtectedRoutes: boolean) => {
+        if (canActivateProtectedRoutes) {
+          return true;
+        }
+        this.showToaster('Access denied', 'Please login to continue access');
+        return false;
+      })
     );
+  }
+
+  // ngbmodal service
+  showToaster(title: string, message: string) {
+    this.toastService.show(message, {
+      classname: 'bg-danger text-light',
+      delay: 2000,
+      autohide: true,
+      headertext: title,
+    });
   }
 }

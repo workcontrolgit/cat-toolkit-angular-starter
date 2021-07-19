@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
-import { AuthGuardWithForcedLogin } from '@app/@core/auth/auth-guard-with-forced-login.service';
+import { AuthGuard } from '@app/@core/auth/auth-guard.service';
+import { RoleGuard } from '@app/@core/auth/role-guard.service';
 
 const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
-    canActivate: [AuthGuardWithForcedLogin],
+    canActivate: [AuthGuard, RoleGuard],
     data: {
       title: marker('Admin'),
       role: 'HrAdmin',

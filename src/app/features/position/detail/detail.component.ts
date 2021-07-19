@@ -65,17 +65,17 @@ export class DetailComponent implements OnInit {
   }
 
   // Handle Delete button click
-  onDelee() {
+  onDelete() {
     this.confirmationDialogService
       .confirm('Position deletion', 'Are you sure you want to delete?')
       .then((confirmed) => {
         if (confirmed) {
           this.delete(this.entryForm.get('id').value);
-          log.debug('onDelee: ', this.entryForm.value);
+          log.debug('onDelete: ', this.entryForm.value);
         }
       })
       .catch(() => {
-        log.debug('onDelee: ', 'Cancel');
+        log.debug('onDelete: ', 'Cancel');
       });
   }
   // CRUD > Read, map to REST/HTTP GET

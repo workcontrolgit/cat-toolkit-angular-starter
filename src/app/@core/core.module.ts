@@ -17,6 +17,7 @@ import { AuthGuardWithForcedLogin } from './auth/auth-guard-with-forced-login.se
 import { AuthGuard } from './auth/auth-guard.service';
 import { authModuleConfig } from './auth/auth-module-config';
 import { AuthService } from './auth/auth.service';
+import { RoleGuard } from './auth/role-guard.service';
 
 // We need a factory since localStorage is not available at AOT build time
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
@@ -29,6 +30,7 @@ export function storageFactory(): OAuthStorage {
   providers: [
     AuthService,
     AuthGuard,
+    RoleGuard,
     AuthGuardWithForcedLogin,
     {
       provide: HTTP_INTERCEPTORS,
