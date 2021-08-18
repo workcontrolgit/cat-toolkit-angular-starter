@@ -5,9 +5,6 @@ import { tap } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
 import { ToastService } from '@app/services/toast.service';
-//import { Logger } from '@core';
-
-//const log = new Logger('AuthGuard');
 
 @Injectable()
 export class AuthGuard implements CanActivate {

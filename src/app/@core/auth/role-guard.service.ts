@@ -18,12 +18,10 @@ export class RoleGuard implements CanActivate {
           // https://javascript.plainenglish.io/4-ways-to-check-whether-the-property-exists-in-a-javascript-object-20c2d96d8f6e
           if (!!route.data.role) {
             const routeRoles = route.data.role;
-            //this.showToaster('Role guard', 'Require role ' + routeRoles);
 
             this.userProfile = this.authService.identityClaims;
             if (!!this.userProfile.role) {
               const userRoles = this.userProfile.role;
-              //this.showToaster('Role guard', 'User profile role ' + userRoles);
 
               if (userRoles.includes(routeRoles)) {
                 // user's roles contains route's role
