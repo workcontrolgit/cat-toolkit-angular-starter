@@ -22,7 +22,9 @@ export class AboutComponent implements OnInit {
     this.accessToken = this.authService.accessToken;
     this.idToken = this.authService.idToken;
     this.profile = this.authService.identityClaims;
-    this.identityClaims = JSON.stringify(this.profile);
-    this.role = JSON.stringify(this.profile.role);
+    if (this.profile != null && this.profile != undefined) {
+      this.identityClaims = JSON.stringify(this.profile);
+      this.role = JSON.stringify(this.profile.role);
+    }
   }
 }

@@ -31,7 +31,7 @@ export const environment = {
   Oidc_silentRefreshRedirectUri: window.location.origin + '/silent-refresh.html',
   Oidc_scope: 'openid profile email roles app.api.employeeprofile.read', // Ask offline_access to support refresh token refreshes
   Oidc_useSilentRefresh: true, // Needed for Code Flow to suggest using iframe-based refreshes
-  Oidc_silentRefreshTimeout: 5000, // For faster testing
+  Oidc_silentRefreshTimeout: 50000, // For faster testing
   Oidc_timeoutFactor: 0.25, // For faster testing
   Oidc_sessionChecksEnabled: true,
   Oidc_showDebugInformation: true, // Also requires enabling "Verbose" level in devtools
