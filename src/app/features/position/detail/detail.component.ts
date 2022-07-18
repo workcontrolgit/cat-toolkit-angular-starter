@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Logger } from '@core';
 import { ApiHttpService } from '@app/services/api-http.service';
 import { ApiEndpointsService } from '@app/services/api-endpoints.service';
@@ -21,7 +21,7 @@ export class DetailComponent implements OnInit {
   formMode = 'New';
   sub: any;
   id: any;
-  entryForm: FormGroup;
+  entryForm: UntypedFormGroup;
   error: string | undefined;
   position: Position;
   isAddNew: boolean = false;
@@ -29,7 +29,7 @@ export class DetailComponent implements OnInit {
   constructor(
     public toastService: ToastService,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private apiHttpService: ApiHttpService,
     private apiEndpointsService: ApiEndpointsService,
     private confirmationDialogService: ConfirmationDialogService
